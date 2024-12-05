@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+    <link rel="stylesheet" href="/css/style2.css" />
+  </head>
+  <body>
+
+
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+    <a href="/cars">Cars</a>
+    <a href="/">Home</a>
+
+    <h1>Home</h1>
+
+    <% if(currentUser && currentUser.email){ %>
+    <div>
+      <h1>Welcome <%= currentUser.fullName %></h1>
+      <p>Your email is <%= currentUser.email %></p>
+    </div>
+    <% } %>
+    <ol>
+      <% users.forEach((user)=>{%>
+      <li>
+        <h3>Full Name: <%= user.fullName %></h3>
+        <h4>email: <%= user.email %></h4>
+        <p></p>
+        <h4>OneId: <%= user.id %></h4>
+      </li>
+      <% })%>
+    </ol>
+  </body>
+</html>

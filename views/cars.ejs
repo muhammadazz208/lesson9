@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cars</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+    <a href="/cars">Cars</a>
+    <a href="/">Home</a>
+
+    <h1>
+      Welcome, <%= currentUser && currentUser.fullName ? currentUser.fullName :
+      "" %>!
+    
+      <% if (typeof message !== 'undefined' && message.length > 0) { %>
+        <h2><%= message %></h2>
+        <% } %> <% if (currentUser && currentUser.fullName) { %>
+        <form action="/api/cars" method="POST">
+          <input type="text" name="model" placeholder="Model" required />
+          <input type="number" name="price" placeholder="Price" required />
+          <input type="text" name="color" placeholder="Color" />
+          <button type="submit">Add Car</button>
+        </form>
+        <% } %>
+    </h1>
+    <h2>Cars List</h2>
+    <ul>
+      <% if (cars.length > 0) { %> <% cars.forEach(car => { %>
+      <li>
+        <h4>model: <%= car.model %></h4>
+        <h4>color: <%= car.color %></h4>
+        <h4>price: <%= car.price %></h4>
+        <h4>count: <%= car.count %></h4>
+      </li>
+      <% }); %> <% } else { %>
+      <h3>the cars are unavailable</h3>
+      <% } %>
+    </ul>
+  </body>
+</html>

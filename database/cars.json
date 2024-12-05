@@ -1,0 +1,38 @@
+[
+  {
+    "id": "4ff06dfa-5058-4089-b42a-b4c2de358611",
+    "color": "black",
+    "price": "28000",
+    "model": "BMW"
+  },
+  {
+    "id": "2d1c61bb-13b9-4092-88e3-6ddbbf860d06",
+    "color": "red",
+    "price": "65000",
+    "model": "Porsche"
+  },
+  {
+    "id": "a30163a4-92fe-42f6-9d50-6b6b6739bddd",
+    "color": "black",
+    "price": "280000",
+    "model": "cadillac escalade"
+  },
+  {
+    "id": "8ab65dc0-6da9-4d1a-a753-468baaefd113",
+    "color": "black",
+    "price": "16000",
+    "model": "volchok"
+  },
+  {
+    "id": "3a7882aa-16fb-482a-a1e8-f3f0ad3cd7b0",
+    "color": "black",
+    "price": "16000",
+    "model": "volchok"
+  },
+  {
+    "id": "cdba1330-718b-45cd-820e-bb294944704c",
+    "color": "black",
+    "price": "300000",
+    "model": "gelik"
+  }
+]

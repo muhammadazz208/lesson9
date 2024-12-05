@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+  </head>
+  <body>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+    <a href="/cars">Cars</a>
+    <a href="/">Home</a>
+
+    <h1>Registration page</h1>
+
+    <% if(message && message.length > 0){ %>
+    <h1><%= message %></h1>
+    <% } %>
+
+    <h1>Register</h1>
+    <form action="/api/register" method="post">
+      <input type="email" placeholder="Email" required name="email" />
+      <input type="password" placeholder="Password" required name="password" />
+      <input type="text" placeholder="Full Name" required name="fullName" />
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
